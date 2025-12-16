@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Exclusive - Наша Свадьба</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
 
         * {
             margin: 0;
@@ -14,8 +14,8 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: #f8f5f0;
+            font-family: 'Cormorant Garamond', serif;
+            background: #faf8f5;
             color: #2c2c2c;
             line-height: 1.8;
             overflow-x: hidden;
@@ -24,10 +24,9 @@
         header {
             position: relative;
             background: linear-gradient(135deg, rgba(139, 117, 101, 0.95) 0%, rgba(92, 77, 66, 0.95) 100%);
-            padding: 25px 40px;
+            padding: 40px;
             text-align: center;
             box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-            backdrop-filter: blur(10px);
         }
 
         header::before {
@@ -41,33 +40,30 @@
             opacity: 0.3;
         }
 
-        header a {
+        .header-content {
             position: relative;
+            z-index: 1;
+        }
+
+        header a {
             color: #f8f5f0;
             text-decoration: none;
-            font-size: 32px;
-            font-weight: 300;
-            letter-spacing: 6px;
-            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            font-weight: 400;
+            letter-spacing: 8px;
+            font-family: 'Playfair Display', serif;
             text-transform: uppercase;
             transition: all 0.4s ease;
-            display: inline-block;
+            display: block;
+            margin-bottom: 15px;
         }
 
-        header a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 1px;
-            background: #f8f5f0;
-            transition: width 0.4s ease;
-        }
-
-        header a:hover::after {
-            width: 100%;
+        .header-tagline {
+            color: #d4af77;
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
 
         .container {
@@ -82,7 +78,6 @@
             margin-bottom: 100px;
             background: white;
             padding: 0;
-            border-radius: 0;
             box-shadow: 0 25px 80px rgba(0,0,0,0.12);
             overflow: hidden;
         }
@@ -108,7 +103,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.9);
+            filter: brightness(0.85);
             transition: transform 0.6s ease;
         }
 
@@ -121,46 +116,52 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
-            padding: 80px 40px 40px;
+            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%);
+            padding: 100px 40px 50px;
         }
 
         h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 72px;
-            font-weight: 300;
+            font-family: 'Great Vibes', cursive;
+            font-size: 90px;
+            font-weight: 400;
             color: white;
-            margin-bottom: 20px;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 25px rgba(0,0,0,0.6);
         }
 
         .date {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
             color: #d4af77;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
+            margin-bottom: 25px;
+            letter-spacing: 4px;
             font-weight: 400;
+            text-transform: uppercase;
         }
 
         .hero-text {
-            color: rgba(255,255,255,0.9);
-            font-size: 18px;
+            color: rgba(255,255,255,0.95);
+            font-size: 20px;
             font-weight: 300;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-style: italic;
         }
 
         .divider {
-            width: 100px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #d4af77, transparent);
-            margin: 60px auto;
+            text-align: center;
+            margin: 70px 0;
+        }
+
+        .divider-ornament {
+            color: #d4af77;
+            font-size: 28px;
+            opacity: 0.6;
         }
 
         .section {
             background: white;
-            padding: 60px;
+            padding: 70px;
             margin-bottom: 60px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.08);
             position: relative;
@@ -177,44 +178,43 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 5px;
             height: 100%;
             background: linear-gradient(180deg, #8b7565, #d4af77);
         }
 
         h2 {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Great Vibes', cursive;
             color: #8b7565;
-            font-size: 48px;
-            margin-bottom: 40px;
+            font-size: 64px;
+            margin-bottom: 50px;
             font-weight: 400;
             letter-spacing: 2px;
             text-align: center;
             position: relative;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
         }
 
         h2::after {
-            content: '✦';
+            content: '❦';
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
             color: #d4af77;
-            font-size: 20px;
+            font-size: 24px;
         }
 
         .venue-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
             margin-top: 40px;
         }
 
         .info-item {
-            padding: 30px;
+            padding: 35px;
             background: linear-gradient(135deg, #f8f5f0 0%, #faf8f5 100%);
-            border-radius: 2px;
             border: 1px solid #e8e4df;
             transition: all 0.3s ease;
             position: relative;
@@ -227,7 +227,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 3px;
+            height: 4px;
             background: linear-gradient(90deg, #8b7565, #d4af77);
             transform: scaleX(0);
             transition: transform 0.3s ease;
@@ -245,65 +245,99 @@
         .info-item strong {
             color: #8b7565;
             display: block;
-            margin-bottom: 10px;
-            font-size: 14px;
-            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
 
         .info-item span {
             color: #2c2c2c;
-            font-size: 18px;
-            font-weight: 300;
+            font-size: 20px;
+            font-weight: 400;
         }
 
-        .seating-chart {
+        .seating-list {
             margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .table {
+        .table-item {
             background: linear-gradient(135deg, #faf8f5 0%, #f8f5f0 100%);
-            padding: 30px;
-            border-radius: 2px;
-            border: 1px solid #e8e4df;
+            padding: 25px 35px;
+            margin-bottom: 20px;
             border-left: 4px solid #d4af77;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        .table::before {
-            content: '◆';
+        .table-item::before {
+            content: '❦';
             position: absolute;
-            top: 20px;
-            right: 20px;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
             color: #d4af77;
             opacity: 0.3;
-            font-size: 24px;
+            font-size: 28px;
         }
 
-        .table:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 30px rgba(139, 117, 101, 0.15);
+        .table-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 25px rgba(139, 117, 101, 0.15);
             border-left-color: #8b7565;
         }
 
         .table-name {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Playfair Display', serif;
             font-weight: 600;
             color: #8b7565;
-            margin-bottom: 15px;
-            font-size: 24px;
+            margin-bottom: 12px;
+            font-size: 26px;
             letter-spacing: 1px;
         }
 
         .guests {
             color: #555;
-            line-height: 1.8;
-            font-weight: 300;
+            line-height: 1.9;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .photo-gallery {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.15);
         }
 
         footer {
@@ -312,7 +346,7 @@
             background: linear-gradient(135deg, #8b7565 0%, #5c4d42 100%);
             color: #f8f5f0;
             position: relative;
-            margin-top: 60px;
+            margin-top: 80px;
         }
 
         footer::before {
@@ -326,484 +360,282 @@
         }
 
         footer p:first-child {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 42px;
+            margin-bottom: 25px;
             letter-spacing: 2px;
         }
 
-        .admin-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #d4af77 0%, #b8935f 100%);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0.4;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(212, 175, 119, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: white;
-            z-index: 999;
+        .ornament {
+            text-align: center;
+            color: #d4af77;
+            font-size: 32px;
+            margin: 50px 0;
+            opacity: 0.6;
         }
 
-        .admin-btn::before {
-            content: '⚙';
-        }
-
-        .admin-btn:hover {
-            opacity: 1;
-            transform: rotate(90deg) scale(1.1);
-            box-shadow: 0 8px 30px rgba(212, 175, 119, 0.5);
-        }
-
-        .modal {
+        .lightbox {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(44, 44, 44, 0.85);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            animation: fadeIn 0.3s ease;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
         }
 
-        .modal-content {
+        .lightbox-close {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 50px;
-            border-radius: 2px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-            border-top: 4px solid #d4af77;
-        }
-
-        .modal h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-        }
-
-        .modal input {
-            width: 100%;
-            padding: 15px;
-            margin: 15px 0;
-            border: 2px solid #e8e4df;
-            border-radius: 2px;
-            font-size: 16px;
-            font-family: 'Montserrat', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-
-        .modal input:focus {
-            outline: none;
-            border-color: #d4af77;
-        }
-
-        .modal button {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #8b7565 0%, #5c4d42 100%);
+            top: 30px;
+            right: 30px;
             color: white;
-            border: none;
-            border-radius: 2px;
-            font-size: 16px;
+            font-size: 50px;
             cursor: pointer;
-            margin-top: 15px;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .modal button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 117, 101, 0.3);
-        }
-
-        .admin-panel {
-            display: none;
-            background: white;
-            padding: 60px;
-            border-radius: 2px;
-            margin-bottom: 60px;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.15);
-            border-left: 6px solid #d4af77;
-            animation: slideDown 0.4s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .admin-panel h2 {
-            color: #8b7565;
-            text-align: left;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #e8e4df;
-        }
-
-        .admin-panel h2::after {
-            display: none;
-        }
-
-        .admin-panel input, .admin-panel textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border: 2px solid #e8e4df;
-            border-radius: 2px;
-            font-size: 14px;
-            font-family: 'Montserrat', sans-serif;
-            transition: all 0.3s ease;
-        }
-
-        .admin-panel input:focus, .admin-panel textarea:focus {
-            outline: none;
-            border-color: #d4af77;
-            box-shadow: 0 0 0 3px rgba(212, 175, 119, 0.1);
-        }
-
-        .admin-panel textarea {
-            min-height: 150px;
-            resize: vertical;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .admin-panel button {
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #8b7565 0%, #5c4d42 100%);
-            color: white;
+            background: none;
             border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            margin-right: 15px;
-            font-size: 14px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            margin-top: 10px;
+            padding: 10px;
+            transition: transform 0.3s ease;
         }
 
-        .admin-panel button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 117, 101, 0.3);
-        }
-
-        .logout-btn {
-            background: linear-gradient(135deg, #8b7565 0%, #6b5d52 100%) !important;
-        }
-
-        .form-group {
-            margin-bottom: 30px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            color: #8b7565;
-            margin-bottom: 8px;
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .lightbox-close:hover {
+            transform: scale(1.2);
         }
 
         @media (max-width: 768px) {
-            .venue-info, .seating-chart {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 40px 20px;
+            }
+
+            header {
+                padding: 30px 20px;
+            }
+
+            header a {
+                font-size: 28px;
+                letter-spacing: 4px;
+            }
+
+            .header-tagline {
+                font-size: 24px;
             }
 
             h1 {
-                font-size: 42px;
+                font-size: 48px;
+                letter-spacing: 2px;
             }
 
             .date {
                 font-size: 24px;
+                letter-spacing: 2px;
             }
 
-            .section {
-                padding: 40px 30px;
+            h2 {
+                font-size: 42px;
             }
 
             .hero-image-wrapper {
                 height: 400px;
             }
 
-            .container {
-                padding: 40px 20px;
+            .hero-overlay {
+                padding: 50px 20px 30px;
+            }
+
+            .section {
+                padding: 40px 25px;
+                margin-bottom: 40px;
+            }
+
+            .venue-info {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .info-item, .table-item {
+                padding: 25px;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+
+            footer p:first-child {
+                font-size: 32px;
             }
         }
 
-        .ornament {
-            text-align: center;
-            color: #d4af77;
-            font-size: 24px;
-            margin: 40px 0;
-            opacity: 0.5;
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .date {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 36px;
+            }
+
+            .hero-image-wrapper {
+                height: 300px;
+            }
+
+            .table-name {
+                font-size: 22px;
+            }
+
+            .guests {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="https://wedding-exclusive.ru">wedding-exclusive.ru</a>
+        <div class="header-content">
+            <a href="https://wedding-exclusive.ru">wedding-exclusive.ru</a>
+            <div class="header-tagline">Ваша идеальная свадьба</div>
+        </div>
     </header>
 
-<div class="container">
-        <div id="adminPanel" class="admin-panel">
-            <h2>Панель администратора</h2>
-            <div class="form-group">
-                <label>Имена молодоженов</label>
-                <input type="text" id="adminNames" placeholder="Александр & Екатерина">
-            </div>
-            <div class="form-group">
-                <label>Дата свадьбы</label>
-                <input type="text" id="adminDate" placeholder="15 июня 2024">
-            </div>
-            <div class="form-group">
-                <label>Время церемонии</label>
-                <input type="text" id="adminTime" placeholder="15:00">
-            </div>
-            <div class="form-group">
-                <label>Название места</label>
-                <input type="text" id="adminVenue" placeholder="Ресторан «Золотой зал»">
-            </div>
-            <div class="form-group">
-                <label>Адрес</label>
-                <input type="text" id="adminAddress" placeholder="ул. Пушкина, д. 10, Москва">
-            </div>
-            <div class="form-group">
-                <label>Дресс-код</label>
-                <input type="text" id="adminDress" placeholder="Коктейльный стиль, пастельные тона">
-            </div>
-            <div class="form-group">
-                <label>URL главной фотографии</label>
-                <input type="text" id="adminImage" placeholder="https://example.com/photo.jpg">
-            </div>
-            <div class="form-group">
-                <label>Карта рассадки</label>
-                <textarea id="adminSeating" placeholder="Стол 1: Иван Иванов, Мария Петрова, Сергей Сидоров
-Стол 2: Анна Смирнова, Петр Кузнецов, Ольга Васильева"></textarea>
-            </div>
-            <button onclick="saveChanges()">Сохранить изменения</button>
-            <button class="logout-btn" onclick="logout()">Выйти</button>
-        </div>
-
+    <div class="container">
         <div class="hero">
             <div class="hero-image-wrapper">
-              <img id="heroImage" class="hero-image" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&h=600&fit=crop" alt="Свадебное фото">
+                <img class="hero-image" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&h=600&fit=crop" alt="Свадебное фото">
                 <div class="hero-overlay">
-                    <h1 id="coupleNames">Святослав &amp; Алёна</h1>
-                    <p class="date" id="weddingDate">28 июня 2026</p>
+                    <h1>Святослав & Алёна</h1>
+                    <p class="date">28 июня 2026</p>
                     <p class="hero-text">Приглашаем вас разделить с нами этот особенный день</p>
-              </div>
+                </div>
             </div>
         </div>
 
-        <div class="ornament">✦ ◆ ✦</div>
+        <div class="divider">
+            <div class="divider-ornament">❦ ✦ ❦</div>
+        </div>
 
         <div class="section">
             <h2>Место проведения</h2>
             <div class="venue-info">
                 <div class="info-item">
                     <strong>Время церемонии</strong>
-                    <span id="ceremonyTime">15:00</span>
+                    <span>15:00(ожидаем)</span>
                 </div>
                 <div class="info-item">
                     <strong>Место</strong>
-                    <span id="venueName">Ресторан «Золотой зал»</span>
+                    <span>Villa «Arco Baleno»</span>
                 </div>
                 <div class="info-item">
                     <strong>Адрес</strong>
-                    <span id="venueAddress">ул. Пушкина, д. 10, Москва</span>
+                    <span>"""Мытищинский район
+д. Высоково, ул. Центральная д. 21а"""</span>
                 </div>
                 <div class="info-item">
                     <strong>Дресс-код</strong>
-                    <span id="dressCode">Коктейльный стиль, пастельные тона</span>
+                    <span>Коктейльный стиль, пастельные тона</span>
                 </div>
             </div>
         </div>
 
-        <div class="ornament">✦ ◆ ✦</div>
+        <div class="divider">
+            <div class="divider-ornament">❦ ✦ ❦</div>
+        </div>
 
         <div class="section">
             <h2>Карта рассадки</h2>
-            <div id="seatingChart" class="seating-chart"></div>
+            <div class="seating-list">
+                <div class="table-item">
+                    <div class="table-name">Стол 1</div>
+                    <div class="guests"Ожидаем</div>
+                </div>
+                <div class="table-item">
+                    <div class="table-name">Стол 2</div>
+                    <div class="guests">Ожидаем</div>
+                </div>
+                <div class="table-item">
+                    <div class="table-name">Стол 3</div>
+                    <div class="guests">Ожидаем</div>
+                </div>
+                <div class="table-item">
+                    <div class="table-name">Стол 4</div>
+                    <div class="guests">Ожидаем</div>
+                </div>
+                <div class="table-item">
+                    <div class="table-name">Стол 5</div>
+                    <div class="guests">Ожидаем</div>
+                </div>
+                <div class="table-item">
+                    <div class="table-name">Стол 6</div>
+                    <div class="guests">Ожидаем</div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <div class="divider">
+            <div class="divider-ornament">❦ ✦ ❦</div>
+        </div>
+
+        <!--<div class="section">
+            <h2>Фотографии со свадьбы</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&h=400&fit=crop" alt="Фото 1" onclick="openLightbox(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop" alt="Фото 2" onclick="openLightbox(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=400&fit=crop" alt="Фото 3" onclick="openLightbox(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=400&h=400&fit=crop" alt="Фото 4" onclick="openLightbox(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1502635385003-ee1e6a1a742d?w=400&h=400&fit=crop" alt="Фото 5" onclick="openLightbox(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop" alt="Фото 6" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+        </div>
+    </div>-->
 
     <footer>
         <p>С любовью, молодожены</p>
-        <div class="ornament">✦ ◆ ✦</div>
-        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">© 2026 Wedding Exclusive</p>
+        <div class="ornament">❦ ✦ ❦</div>
+        <p style="margin-top: 25px; font-size: 15px; opacity: 0.85; font-family: 'Playfair Display', serif; letter-spacing: 2px;">© 2026 WEDDING EXCLUSIVE +7(961)693-25-00 (Организатор Елена)</p>
     </footer>
 
-    <button class="admin-btn" onclick="showLogin()" title="Панель администратора"></button>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h2>Вход</h2>
-            <input type="password" id="password" placeholder="Введите пароль" onkeypress="if(event.key==='Enter') login()">
-            <button onclick="login()">Войти</button>
-            <button onclick="closeLogin()" style="background: linear-gradient(135deg, #999 0%, #666 100%);">Отмена</button>
-        </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">×</button>
+        <img id="lightboxImg" src="" alt="Фото">
     </div>
 
     <script>
-        const DEFAULT_PASSWORD = 'wedding2024';
-        
-        const defaultData = {
-            names: 'Александр & Екатерина',
-            date: '15 июня 2024',
-            time: '15:00',
-            venue: 'Ресторан «Золотой зал»',
-            address: 'ул. Пушкина, д. 10, Москва',
-            dress: 'Коктейльный стиль, пастельные тона',
-            image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&h=600&fit=crop',
-            seating: `Стол 1: Иван Иванов, Мария Петрова, Сергей Сидоров
-Стол 2: Анна Смирнова, Петр Кузнецов, Ольга Васильева
-Стол 3: Дмитрий Соколов, Елена Морозова, Андрей Новиков
-Стол 4: Наталья Волкова, Михаил Попов, Виктория Лебедева
-Стол 5: Олег Козлов, Светлана Федорова, Игорь Медведев
-Стол 6: Юлия Зайцева, Максим Орлов, Татьяна Николаева`
-        };
-
-        function loadData() {
-            const data = {};
-            try {
-                const stored = localStorage.getItem('weddingData');
-                if (stored) {
-                    Object.assign(data, JSON.parse(stored));
-                }
-            } catch (e) {
-                console.log('Using default data');
-            }
-            
-            Object.keys(defaultData).forEach(key => {
-                if (!data[key]) data[key] = defaultData[key];
-            });
-            
-            return data;
+        function openLightbox(url) {
+            document.getElementById('lightboxImg').src = url;
+            document.getElementById('lightbox').style.display = 'flex';
         }
 
-        function saveData(data) {
-            try {
-                localStorage.setItem('weddingData', JSON.stringify(data));
-            } catch (e) {
-                console.log('Could not save data');
-            }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
         }
-
-        function renderPage() {
-            const data = loadData();
-            
-            document.getElementById('coupleNames').textContent = data.names;
-            document.getElementById('weddingDate').textContent = data.date;
-            document.getElementById('ceremonyTime').textContent = data.time;
-            document.getElementById('venueName').textContent = data.venue;
-            document.getElementById('venueAddress').textContent = data.address;
-            document.getElementById('dressCode').textContent = data.dress;
-            document.getElementById('heroImage').src = data.image;
-            
-            const seatingChart = document.getElementById('seatingChart');
-            seatingChart.innerHTML = '';
-            
-            const tables = data.seating.split('\n').filter(line => line.trim());
-            tables.forEach(table => {
-                const [tableName, guests] = table.split(':');
-                if (tableName && guests) {
-                    const tableDiv = document.createElement('div');
-                    tableDiv.className = 'table';
-                    tableDiv.innerHTML = `
-                        <div class="table-name">${tableName.trim()}</div>
-                        <div class="guests">${guests.trim()}</div>
-                    `;
-                    seatingChart.appendChild(tableDiv);
-                }
-            });
-        }
-
-        function showLogin() {
-            document.getElementById('loginModal').style.display = 'block';
-            document.getElementById('password').focus();
-        }
-
-        function closeLogin() {
-            document.getElementById('loginModal').style.display = 'none';
-            document.getElementById('password').value = '';
-        }
-
-        function login() {
-            const password = document.getElementById('password').value;
-            if (password === DEFAULT_PASSWORD) {
-                closeLogin();
-                showAdminPanel();
-            } else {
-                alert('Неверный пароль!');
-            }
-        }
-
-        function showAdminPanel() {
-            const data = loadData();
-            document.getElementById('adminNames').value = data.names;
-            document.getElementById('adminDate').value = data.date;
-            document.getElementById('adminTime').value = data.time;
-            document.getElementById('adminVenue').value = data.venue;
-            document.getElementById('adminAddress').value = data.address;
-            document.getElementById('adminDress').value = data.dress;
-            document.getElementById('adminImage').value = data.image;
-            document.getElementById('adminSeating').value = data.seating;
-            
-            document.getElementById('adminPanel').style.display = 'block';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function saveChanges() {
-            const data = {
-                names: document.getElementById('adminNames').value,
-                date: document.getElementById('adminDate').value,
-                time: document.getElementById('adminTime').value,
-                venue: document.getElementById('adminVenue').value,
-                address: document.getElementById('adminAddress').value,
-                dress: document.getElementById('adminDress').value,
-                image: document.getElementById('adminImage').value,
-                seating: document.getElementById('adminSeating').value
-            };
-            
-            saveData(data);
-            renderPage();
-            alert('Изменения сохранены! ✅');
-        }
-
-        function logout() {
-            document.getElementById('adminPanel').style.display = 'none';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        renderPage();
     </script>
 </body>
 </html>
+
