@@ -132,6 +132,24 @@
         .faq-answer.active {
             max-height: 500px;
         }
+		/* Fix mobile overlap for sticky CTA */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 120px;
+    }
+}
+
+.sticky-cta {
+    position: fixed;
+    bottom: env(safe-area-inset-bottom);
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #8B5CF6 0%, #D4AF37 100%);
+    padding: 12px 16px;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
     </style>
 </head>
 <body class="bg-gray-50 antialiased">
@@ -684,32 +702,45 @@
                     <h2 class="text-4xl font-bold text-gray-900 mb-4 font-title">Запишитесь на первую встречу</h2>
                     <p class="text-gray-600 mb-8">🎁 При заказе сегодня — скидка 5% + бесплатный концепт-бук</p>
 
-                    <form id="contactForm" class="space-y-5 bg-white p-8 rounded-2xl shadow-2xl">
-                        <div>
-                            <label for="name" class="sr-only">Ваше имя</label>
-                            <input type="text" id="name" name="name" placeholder="Ваше имя" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
-                        </div>
+                    <div id="contact" class="scroll-mt-24 md:scroll-mt-32">
 
-                        <div>
-                            <label for="phone" class="sr-only">Телефон</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Телефон" required class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
-                        </div>
+    <form id="contactForm"
+          class="space-y-5 bg-white p-8 rounded-2xl shadow-2xl">
 
-                        <div>
-                            <label for="budget" class="sr-only">Бюджет</label>
-                            <input type="text" id="budget" name="budget" placeholder="Планируемый бюджет (опционально)" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
-                        </div>
+        <div>
+            <label for="name" class="sr-only">Ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required
+                   class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
+        </div>
 
-                        <div>
-                            <button type="submit" class="w-full py-3.5 bg-accent text-white text-lg font-semibold rounded-full shadow-xl hover:bg-purple-700 transition duration-300 transform hover:scale-[1.01]">
-                                Обсудить мою эксклюзивную свадьбу
-                            </button>
-                        </div>
+        <div>
+            <label for="phone" class="sr-only">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" required
+                   class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
+        </div>
 
-                        <p class="text-xs text-gray-500 text-center">
-                            ⏰ Мы свяжемся с вами в течение 30 минут.
-                        </p>
-                    </form>
+        <div>
+            <label for="budget" class="sr-only">Бюджет</label>
+            <input type="text" id="budget" name="budget"
+                   placeholder="Планируемый бюджет (опционально)"
+                   class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:ring-accent focus:border-accent">
+        </div>
+
+        <div>
+            <button type="submit"
+                    class="w-full py-3.5 bg-accent text-white text-lg font-semibold rounded-full shadow-xl hover:bg-purple-700 transition duration-300 transform hover:scale-[1.01]">
+                Обсудить мою эксклюзивную свадьбу
+            </button>
+        </div>
+
+        <p class="text-xs text-gray-500 text-center">
+            ⏰ Мы свяжемся с вами в течение 30 минут.
+        </p>
+
+    </form>
+
+</div>
+
                 </div>
             </div>
 
@@ -774,14 +805,18 @@
     </footer>
 
     <!-- Sticky CTA Bar -->
-    <div class="sticky-cta" id="stickyCta">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-white font-semibold text-center sm:text-left">🎁 Скидка 5% при заказе сегодня!</p>
-            <a href="#contacts" class="px-6 py-2 bg-white text-accent font-bold rounded-full hover:bg-gray-100 transition whitespace-nowrap">
-                Получить скидку
-            </a>
-        </div>
+<div class="sticky-cta" id="stickyCta">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white font-semibold text-center sm:text-left">
+            🎁 Скидка 5% при заказе сегодня!
+        </p>
+        <a href="#contact"
+           class="px-6 py-2 bg-white text-accent font-bold rounded-full hover:bg-gray-100 transition whitespace-nowrap">
+            Получить скидку
+        </a>
     </div>
+</div>
+
 
     <!-- Social Proof Popup -->
     <div class="social-proof" id="socialProof">
